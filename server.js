@@ -18,7 +18,7 @@ process.on('SIGINT', function() {
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send(hostname + "\n");
+  res.send("v1.0" + hostname + "\n");
 });
 
 app.listen(PORT, HOST);
