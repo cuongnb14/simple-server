@@ -18,6 +18,7 @@ process.on('SIGINT', function() {
 const app = express();
 
 app.get('/', (req, res) => {
+  console.log(req.method + " " + req.url + " " + req.headers['user-agent']);
   res.send("v2.0 :: " + hostname + "\n");
 });
 
